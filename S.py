@@ -54,7 +54,7 @@ while True:
                                 client.sendText(receiver, "TestSpeed")
                                 elapsed_time = time.time() - start
                                 client.sendText(receiver, "%sdetik" % (elapsed_time))
-                            elif 'spic' in text.lower():
+                            elif 'sp' in text.lower():
                                 try:
                                     key = eval(msg.contentMetadata["MENTION"])
                                     u = key["MENTIONEES"][0]["M"]
@@ -62,7 +62,7 @@ while True:
                                     client.sendImageWithURL(receiver, 'http://dl.profile.line.naver.jp/'+a)
                                 except Exception as e:
                                     client.sendText(receiver, str(e))
-                            elif 'scover' in text.lower():
+                            elif 'sc' in text.lower():
                                 try:
                                     key = eval(msg.contentMetadata["MENTION"])
                                     u = key["MENTIONEES"][0]["M"]
