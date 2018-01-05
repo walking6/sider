@@ -2,7 +2,7 @@
 from linepy import *
 import json, time, random
 
-client = LineClient()
+client = LineClient(authToken="EokBEl6zyxZAuMPws3M4.qF09O2f5la8k8iTKqk0KHa.bQijFB69e6J2ES3ZFDCXy9Hrj0IFHD/2t2LCpaiw6qY=")
 #client = LineClient(authToken='AUTH TOKEN')
 client.log("Auth Token : " + str(client.authToken))
 
