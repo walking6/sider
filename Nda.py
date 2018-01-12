@@ -2,7 +2,7 @@
 from linepy import *
 import json, time, random
 
-client = LineClient(authToken="EoZzcJZ5KTXPHXXqitm4.qF09O2f5la8k8iTKqk0KHa.FrxP/vGWDi3PaerObqlN4UOonXL4glss+WcQChSwTMk=")
+client = LineClient(authToken="EoMXp7eJGdMJUgWezAz4.qF09O2f5la8k8iTKqk0KHa.NdO/6AQkn7yU1BNZvuMSREEHFJvV/hUFrRh1blftg2Q=")
 #client = LineClient(authToken='AUTH TOKEN')
 client.log("Auth Token : " + str(client.authToken))
 
@@ -27,7 +27,7 @@ while True:
                     if msg.toType == 2:
                         may = client.getProfile().mid
                         if may in str(msg.contentMetadata) and 'MENTION' in str(msg.contentMetadata):
-                            pilih = ['yang tag saya berarti kangen','duhh kena tag, kangen yah','yang di tag masih tidur']
+                            pilih = ['yang tag saya berarti kangen','duhh kena tag, kangen yah','yang di tag masih tidur','yang di tag lg make up, biar cantik dikit','jngn tag dulu, tanggung lg beol (>.<)']
                             rslt = random.choice(pilih)
                             client.sendText(msg.to, str(rslt))
                         else:
@@ -151,7 +151,7 @@ while True:
                                 pass
                             else:
                                 cctv['sidermem'][op.param1] += "\n~ " + Name
-                                pref=['eh ada kak','hai kak','haloo kak..','sini masuk kak','hayoo ngintip']
+                                pref=['eh ada kak','hai kak','haloo kak..','sini masuk kak','hayoo ngintip','Sini gabung kak']
                                 client.sendText(op.param1, str(random.choice(pref))+' '+Name)
                         else:
                             pass
